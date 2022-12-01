@@ -21,7 +21,7 @@
           <button class="btn reg-btn">Register</button>
         </main>
         <footer>
-          <span @click="$router.push({ name: 'Authorization' })" class="footer-nav">already have an account?</span>
+          <span @click="$router.push({ name: 'Authorization' })" class="footer-nav">Already have an account?</span>
         </footer>
       </form>
     </div>

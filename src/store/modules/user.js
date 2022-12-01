@@ -1,3 +1,6 @@
+import {API_URL} from '/config'
+console.log(API_URL)
+
 export const namespaced = true
 
 export const state = () => ({

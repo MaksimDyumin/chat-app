@@ -17,7 +17,7 @@
           <button class="btn reg-btn">Register</button>
         </article>
         <footer>
-          <span @click="$router.push({ name: 'Register' })" class="footer-nav">no account?</span>
+          <span @click="$router.push({ name: 'Register' })" class="footer-nav">No account?</span>
         </footer>
       </form>
     </div>
@@ -75,7 +75,7 @@ label,
 }
 
 .reg-btn {
-  margin: 50px auto;
+  margin: 40px auto;
   width: 110px;
 }
 

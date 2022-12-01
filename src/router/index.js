@@ -6,6 +6,7 @@ import PostsPage from '@/pages/posts/PostsPage'
 import ChatsPage from '@/pages/chat/ChatsPage.vue'
 import Chat from '@/pages/chat/Chat'
 import Post from '@/pages/posts/Post'
+import CreatePost from '@/pages/posts/CreatePost.vue'
 
 
 const routes = [
@@ -24,6 +25,7 @@ const routes = [
         name: 'Authorization',
         component: Authorization
     },
+    // Снизу ветка постов
     {
         path: '/posts',
         name: 'Posts',
@@ -34,6 +36,12 @@ const routes = [
         name: 'Post',
         component: Post,
     },
+    {
+        path: '/posts/create',
+        name: 'PostCreate',
+        component: CreatePost,
+    },
+    // Снизу ветка чата
     {
         path: '/chat',
         name: 'ChatList',

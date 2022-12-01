@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="app-container">
+  <div refs="rer" class="app-container">
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" :key="$route.path"/>
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import Header from '@/components/Header.vue'
 
 export default {
@@ -18,6 +17,10 @@ export default {
   components: {
     //HelloWorld,
     Header
+  },
+  async mounted() {
+    //'posts/createPost'
+    //await console.log(await this.$store.dispatch('post/createPost'))
   }
 }
 </script>

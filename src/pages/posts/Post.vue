@@ -1,6 +1,6 @@
 <template>
   <div class="page-container">
-    <h1>"Тайтл паоста"</h1>
+    <h1>"Тайтл поста"</h1>
     <hr>
   </div>
 </template>
@@ -15,11 +15,6 @@ export default {
 </script>
   
 <style scoped>
-.sovet-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 hr {
   margin: 0;
 }
