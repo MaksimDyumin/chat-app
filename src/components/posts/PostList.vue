@@ -1,6 +1,6 @@
 <template>
   <div class="posts-card-list">
-    <PostCard v-for="item of 5" :key="item" />
+    <PostCard v-for="item of items" :key="item" :item="item"/>
   </div>
 </template>
 <script>
@@ -11,7 +11,14 @@ export default {
   components: {
     PostCard
   },
-  props: {
+  data() {
+    return {
+      items: []
+    }
+  },
+  async mounted() {
+    await this.$store.dispatch('post/getPosts',{limit: 2, offset: 0})
+    this.items = this.$store.getters['post/getPosts']
   }
 }
 </script>

@@ -19,8 +19,7 @@ export default {
     Header
   },
   async mounted() {
-    //'posts/createPost'
-    //await console.log(await this.$store.dispatch('post/createPost'))
+    //await this.$store.dispatch('post/createPost')
   }
 }
 </script>

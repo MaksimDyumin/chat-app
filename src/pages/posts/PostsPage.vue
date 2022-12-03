@@ -17,6 +17,10 @@ export default {
   name: 'PostsPage',
   components: {
     PostList
+  },
+  methods: {
+    async getPosts() {
+    }
   }
 }
 </script>

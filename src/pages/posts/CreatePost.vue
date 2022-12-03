@@ -16,14 +16,16 @@ export default {
   name: 'HomeComp',
   components: {
   },
+  props: {
+  },
   data() {
     return {
       text: ''
     }
   },
   methods: {
-    createPost() {
-      alert(`Пост сделан: ${this.text}`)
+    async createPost() {
+      await this.$store.dispatch('post/createPost', {text: this.text})
     }
   },
 

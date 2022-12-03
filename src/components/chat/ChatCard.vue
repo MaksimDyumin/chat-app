@@ -10,6 +10,8 @@ export default {
   name: 'HelloWorld',
   props: {
   },
+  mounted() {
+  },
   methods: {
     showInfo() {
       console.log(this.$router)

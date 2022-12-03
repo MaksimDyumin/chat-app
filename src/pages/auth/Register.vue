@@ -8,15 +8,15 @@
         <main>
           <label for="e-mail">
             <span class="label-text">e-mail</span>
-            <input placeholder="example@yandex.ru" type="text">
+            <input v-model="email" placeholder="example@yandex.ru" type="text">
           </label>
           <label for="password">
             <span class="label-text">password</span>
-            <input placeholder="*********" type="text">
+            <input v-model="password" placeholder="*********" type="text">
           </label>
           <label for="confirm-password">
             <span class="label-text">confirm password</span>
-            <input placeholder="*********" type="text">
+            <input v-model="confirmPassword" placeholder="*********" type="text">
           </label>
           <button class="btn reg-btn">Register</button>
         </main>
@@ -35,9 +35,29 @@ export default {
   name: 'RegPage',
   components: {
   },
+  data() {
+    return {
+      email: '',
+      password: '',
+      confirmPassword: ''
+    }
+  },
   methods: {
-    register() {
-
+    async register() {
+      if(this.password === this.confirmPassword) {
+        const user = {
+          email: this.email,
+          password: this.password
+        }
+        let reg = await this.$store.dispatch('user/registerUser', user)
+        if(reg === undefined) {
+          this.$router.push({name: 'Authorization'})
+        }
+      }
+      else {
+        alert('Пароли не совпадают')
+      }
+      
     }
   }
 }

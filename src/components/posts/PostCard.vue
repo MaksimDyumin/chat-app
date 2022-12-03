@@ -1,6 +1,6 @@
 <template>
   <div @click="$router.push({name: 'Post', params: {id: 1}})" class="post-card-container">
-    <h3>"Тайтл поста"</h3>
+    <h3>{{item.text}}</h3>
     <p>"Описание:"</p>
   </div>
 </template>
@@ -9,6 +9,7 @@
 export default {
   name: 'HelloWorld',
   props: {
+    item: Object
   }
 }
 </script>
